@@ -1,24 +1,33 @@
+<?php require_once __DIR__."/php/main.php"; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<title>Desafio Top Invest</title>
+	<title>Desafio <?= $feed->channel->title ?></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<?php
-		//remoto
-		//$xml = simplexml_load_file("https://www.topinvest.com.br/feed/");
-
-		//local
-		$xml = file_get_contents("xml/topinvest.xml");
-		$feed = simplexml_load_string($xml);
-
-	?>
 	<header>
-		
+		<figure>
+			<a href="<?= $feed->channel->link ?>"><img src="img/logo_topinvest.png"></a>
+		</figure>
+		<h1><?= $feed->channel->title ?></h1>
 	</header>
-	<main>
-		
+	<main class="noticias">
+		<?php 
+			foreach ($feed->channel->item as $post) {
+				?>
+				<div class="noticia">
+					<a href="<?= $post->link ?>" target="_blank">
+						<figure></figure>
+						<h2><?= $post->title ?></h2>
+						<h3><?= $post->pubDate ?></h3>
+					</a>
+				</div>
+				<?php
+			}
+		?>
 	</main>
 	<footer>
 		
