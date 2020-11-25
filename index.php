@@ -30,7 +30,9 @@
 		?>
 	</main>
 	<footer>
-		
+		<div>
+			<p>TopInvest Desafio por <a href="https://github.com/PedroWelbert/topinvestdesafio">Pedro Welbert</a></p>
+		</div>
 	</footer>
 </body>
 </html>

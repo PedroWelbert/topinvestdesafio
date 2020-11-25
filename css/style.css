@@ -74,6 +74,19 @@ header h1 {
 	background-color: var(--PurpleLight);
 	margin: 1rem;
 	border-radius: 1rem;
+	transition: ease-in-out .3s all;
+}
+
+.noticia:hover {
+	background-color: var(--PurpleMedium);
+}
+
+.noticia:hover h2 {
+	color: var(--PurpleLight);
+}
+
+.noticia:hover h3 {
+	color: var(--pinkLight);
 }
 
 .noticia figure {
@@ -105,3 +118,21 @@ header h1 {
 	position: relative;
 	bottom: 1rem;
 }
+
+footer {
+	margin-top: 1rem;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	background: var(--pinkDark);
+}
+
+footer p{
+	font-size: 120%;
+	color: white;
+}
+
+footer a{
+	color: var(--PurpleDark);
+}
+
