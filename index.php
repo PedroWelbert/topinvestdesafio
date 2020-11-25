@@ -8,6 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<script type="text/javascript">
+		const proxyurl = "https://cors-anywhere.herokuapp.com/";
+		const url = "https://www.topinvest.com.br/feed/";
+		  fetch(proxyurl + url)
+		  .then(response => response.text())
+		  .then(contents => console.log(contents))
+		  .catch(() => console.log("Can’t access " + url + " response."))
+	</script>
 	<header>
 		<figure>
 			<a href="<?= $feed->channel->link ?>"><img src="img/logo_topinvest.png"></a>
